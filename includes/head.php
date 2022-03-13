@@ -9,4 +9,4 @@
     include 'includes/stylebundle.php';
     ?>
 </head>
-<body>
+<body class="m-3">
