@@ -5,7 +5,7 @@ class DatabaseConfig
     private $host = "localhost";
     private $user = "root";
     private $pwd = "";
-    private $dbName = "boatymcboatface";
+    private $dbName = "TestCMS";
 
     public function connect()
     {
