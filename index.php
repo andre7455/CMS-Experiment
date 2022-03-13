@@ -1,10 +1,7 @@
 <?php
 include 'includes/head.php';
 ?>
-
-<body>
-    <p>kaas</p>
-    <form>
+<form>
         <div class="form-group row">
             <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-4">
@@ -23,4 +20,7 @@ include 'includes/head.php';
             </div>
         </div>
     </form>
-</body>
+    <a href="vieuw/AddUser.php" class="btn btn-primary">sign up</a>
+<?php
+include '../includes/footer.php'
+?>
