@@ -1,5 +1,6 @@
 <?php
 include 'includes/head.php';
+//include '';
 ?>
 <form>
         <div class="form-group row">
@@ -22,5 +23,5 @@ include 'includes/head.php';
     </form>
     <a href="vieuw/AddUser.php" class="btn btn-primary">sign up</a>
 <?php
-include '../includes/footer.php'
+include 'includes/footer.php'
 ?>
