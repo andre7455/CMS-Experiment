@@ -8,7 +8,7 @@ $beschijving = $_POST["beschijving"];
 $locatie = $_POST["locatie"];
 $prijs = $_POST["prijs"];
 
-$sql = "UPDATE `boten`( `Titel`,`Beschrijving`,`Locatie`,`Prijs`) VALUES ('" . $name ."', '" . $beschijving ."', '". $locatie."', '". $prijs ."') WHERE  'ID' = $id";
+$sql = "UPDATE `boten`( `Titel`,`Beschrijving`,`Locatie`,`Prijs`) VALUES ('" . $name . "', '" . $beschijving . "', '" . $locatie . "', '" . $prijs . "') WHERE  'ID' = $id";
 
 $stmt = $dbconfig->connect()->prepare($sql);
 $stmt->execute();

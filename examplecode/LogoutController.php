@@ -1,9 +1,9 @@
 <?php
-if(isset($_POST["logout"])){
+if (isset($_POST["logout"])) {
     session_unset();
-    if(!isset($_SESSION["userEmail"])){
+    if (!isset($_SESSION["userEmail"])) {
         header("Location: index.php");
-    }else{
+    } else {
         echo "wtf";
     }
 }

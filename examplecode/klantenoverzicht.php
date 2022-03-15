@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
- <!-- FAVICON -->
-  <link rel="shortcut icon" href="assets/images/favicon.png">
+<!-- FAVICON -->
+<link rel="shortcut icon" href="assets/images/favicon.png">
 
 <!-- CSS:: FONTS -->
-  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
 
 <!-- CSS:: MAIN -->
-  <link rel="stylesheet" type="text/css" href="assets/css/main.css">
-  <link rel="stylesheet" type="text/css" id="r-color-roller" href="assets/color-files/color-08.css">
+<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+<link rel="stylesheet" type="text/css" id="r-color-roller" href="assets/color-files/color-08.css">
 
 <?php
 
@@ -24,7 +24,7 @@ include "header.php";
 <br>
 <br>
 <br>
-<br>  
+<br>
 <br>
 <br>
 <br>
@@ -35,15 +35,14 @@ include "header.php";
 $dbconfig = new DatabaseConfig;
 
 $userQuery = "SELECT * FROM gebruiker";
-    $userResult = $dbconfig->connect()->prepare($userQuery);
-    $userResult->execute(array());
-    $userRow = $userResult->setFetchMode(PDO::FETCH_ASSOC);
-    $userRow = $userResult->fetchAll();
+$userResult = $dbconfig->connect()->prepare($userQuery);
+$userResult->execute(array());
+$userRow = $userResult->setFetchMode(PDO::FETCH_ASSOC);
+$userRow = $userResult->fetchAll();
 
-if (!empty($userRow))
-{
+if (!empty($userRow)) {
 
-    echo '
+	echo '
     <table class="table">
         <thead>
             <tr>
@@ -53,13 +52,13 @@ if (!empty($userRow))
             </tr>
         </thead>
         <tbody>
-    '; 
+    ';
 
-    // output data of each row
-    $i = 0;
-    $rowLength = count($userRow);
-    while ($i < $rowLength) {
-        /*
+	// output data of each row
+	$i = 0;
+	$rowLength = count($userRow);
+	while ($i < $rowLength) {
+		/*
         het is niet nodig om gegevens in een var te zetten en vervolgens alleen te printen je kan ook direct de gegevens printen.
 
         $userprintName = 
@@ -67,9 +66,9 @@ if (!empty($userRow))
         $userprintRol = 
         */
 
-        //echo "Username: " . $userprintName . " - Email: " . $userprintEmail . " - Rol: " . $userprintRol . "<br>";
-        echo
-        '
+		//echo "Username: " . $userprintName . " - Email: " . $userprintEmail . " - Rol: " . $userprintRol . "<br>";
+		echo
+				'
             <tr>
             <td>' . $userRow[$i]["Username"] . '</td>
             <td>' . $userRow[$i]["Email"] . '</td>
@@ -79,23 +78,20 @@ if (!empty($userRow))
             </tr>
 
         ';
-        $i++;
-        if($i == $rowLength){
-            break;
-        }
-    }
+		$i++;
+		if ($i == $rowLength) {
+			break;
+		}
+	}
 
-    echo
-    '
+	echo
+	'
         </body>
     </table>
     ';
 
-}
-
-else
-{
-    echo "Geen gegevens in de database gevonden";
+} else {
+	echo "Geen gegevens in de database gevonden";
 }
 
 ?>

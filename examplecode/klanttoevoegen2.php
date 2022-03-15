@@ -14,12 +14,9 @@ $sql = 'INSERT INTO product ( `product`, `catogorie`, `prijs` ) VALUES ( "' . $p
 echo '<h1>[ADMIN] Slijterij stuk in m`n kraag </h1>';
 
 
-if( $conn->query( $sql ) )
-{
+if ($conn->query($sql)) {
     echo "<p>The product has succesfully been added</p>";
-}
-else
-{
+} else {
     echo "<p>The product could not be added</p>";
 }
 

@@ -9,7 +9,7 @@ $email = $_POST["loginEmail"];
 $password = $_POST["loginPassword"];
 
 //als postvariabelen waardes hebben, voert het dit uit
-if(isset($_POST["loginSubmit"])){
+if (isset($_POST["loginSubmit"])) {
     //haalt alle gebruikers gegevens op uit de database waar de email overeenkomt met de opgegeven email en stopt het in een array 
     $userQuery = "SELECT * FROM gebruiker WHERE Email= ?";
     $userResult = $dbconfig->connect()->prepare($userQuery);
@@ -18,7 +18,7 @@ if(isset($_POST["loginSubmit"])){
     $userRow = $userResult->fetchAll();
 
     //als de array niet leeg is, voert het dit uit
-    if(!empty($userRow)){
+    if (!empty($userRow)) {
         $i = 0;
         $rowLength = count($userRow);
         while ($i <= $rowLength) {
@@ -38,8 +38,8 @@ if(isset($_POST["loginSubmit"])){
                 print_r("Er is iets fout gegaan, neem contact op met de systeembeheerder");
             }
             print_r("Er is iets fout gegaan, neem contact op met de systeembeheerder");
-        }    
-        print_r("Er is iets fout gegaan, neem contact op met de systeembeheerder");   
+        }
+        print_r("Er is iets fout gegaan, neem contact op met de systeembeheerder");
     }
     print_r("Er is iets fout gegaan, neem contact op met de systeembeheerder");
 }
