@@ -1,11 +1,18 @@
 <?php
-include '../includes/databaseConfig.php';
 
 $dbconfig = new DatabaseConfig;
 
-$email = $_POST["email"];
-$password = $_POST["password"];
+$username = $_POST['email'];
+$password = $_POST['password'];
 
-//sanitizer (maybe that needs to be done much sooner and maybe i need a wrapper
+$userQuery = "SELECT * FROM `users` WHERE `Username` = 'andre';";
+$userResult = $dbconfig->connect()->prepare($userQuery);
+$userResult->execute(array());
+$userRow = $userResult->setFetchMode(PDO::FETCH_ASSOC);
+$userRow = $userResult->fetchAll();
 
-//$password = password_hash($password, ) i need to password hash this
+if($password === $userRow['password']){
+
+}
+
+?>
