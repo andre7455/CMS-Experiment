@@ -2,7 +2,7 @@
 $title = "New user";
 include '../includes/head.php';
 ?>
-<form>
+<form method="post" action="../control/addUserController.php">
     <div class="form-group row">
         <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-4">

@@ -1,4 +1,5 @@
 <?php
+include '../includes/databaseConfig.php';
 
 $dbconfig = new DatabaseConfig;
 
@@ -11,8 +12,5 @@ $userResult->execute(array());
 $userRow = $userResult->setFetchMode(PDO::FETCH_ASSOC);
 $userRow = $userResult->fetchAll();
 
-if($password === $userRow['password']){
-
-}
 
 ?>
