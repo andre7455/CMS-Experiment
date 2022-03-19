@@ -3,7 +3,7 @@ $title = "home";
 include 'includes/head.php';
 //include '';
 ?>
-	<form method="post" action="control/loginController.php">
+	<form method="post" action="control.php">
 		<div class="form-group row">
 			<label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
 			<div class="col-sm-4">
