@@ -12,11 +12,10 @@ $userResult->execute(array());
 $userRow = $userResult->setFetchMode(PDO::FETCH_ASSOC);
 $userRow = $userResult->fetchAll();
 
-if($userRow[1]["password"] = $userRow){
+if($userRow[0]['password'] === $password){
     header("Location: https://google.com");
-    die();
 } else {
     header("Location: https://bing.com");
-    die();
 }
+die();
 ?>
