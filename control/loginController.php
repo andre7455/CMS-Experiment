@@ -12,7 +12,7 @@ $userResult->execute(array());
 $userRow = $userResult->setFetchMode(PDO::FETCH_ASSOC);
 $userRow = $userResult->fetchAll();
 
-if($userRow[0]['password'] === $password && empty($username) && empty($password)){
+if($userRow[0]['password'] === $password && $username != "" && $password != ""){
     header("Location: https://google.com");
 } else {
     header("Location: https://bing.com");
