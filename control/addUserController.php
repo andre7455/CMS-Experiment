@@ -15,7 +15,5 @@ echo $stmt;
 
 $stmt = $dbconfig->connect()->prepare($stmt);
 $stmt->execute();
-
-
-http_redirect("../index.php");
-
+header("Location: ../index.php");
+?>
