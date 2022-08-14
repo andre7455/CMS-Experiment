@@ -17,6 +17,15 @@ class DatabaseConfig
         $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
         return $pdo;
     }
+
+
+//a function that can be used to s
+function SQL($stmt){
+    $dbconfig = new DatabaseConfig;
+    $stmt = $dbconfig->connect()->prepare($stmt);
+    $stmt->execute();
+return 'true';
+}
 }
 
 //include DatabaseConfig.php in php bestanden waar je er bij moet
