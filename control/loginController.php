@@ -15,6 +15,7 @@ $userRow = $userResult->fetchAll();
 if($userRow[0]['password'] === $password && $username != "" && $password != ""){
     header("Location: https://google.com");
 } else {
+    DatabaseConfig.SQL("INSERT INTO `users` (`Username`, `password`) VALUES ('kaas', 'kaas');");
     header("Location: https://bing.com");
 }
 die();
